@@ -1,0 +1,118 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Evaluación de Software: Compatibilidad con Diferentes Plataformas}
+\author{Phocco Soncco Yeni Rosmirian}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Introducción}
+La compatibilidad del software con diferentes plataformas es crucial para asegurar que funcione correctamente en diversos entornos. Esta presentación examina los factores que afectan la compatibilidad, métodos de evaluación, ejemplos prácticos y bibliografía.
+\end{frame}
+
+\begin{frame}
+\frametitle{Objetivos de la Evaluación de Compatibilidad}
+\begin{itemize}
+    \item Asegurar que el software funciona correctamente en múltiples sistemas operativos.
+    \item Verificar la compatibilidad con diferentes versiones de plataformas.
+    \item Evaluar la interoperabilidad con otros sistemas y software.
+    \item Identificar y resolver problemas específicos de cada plataforma.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Factores que Influyen en la Compatibilidad}
+\begin{itemize}
+    \item \textbf{Sistemas Operativos:} Windows, macOS, Linux.
+    \item \textbf{Versiones de SO:} Compatibilidad con versiones antiguas y nuevas.
+    \item \textbf{Entornos de Ejecución:} Navegadores web, máquinas virtuales, contenedores.
+    \item \textbf{Hardware:} Diferencias en arquitecturas y componentes.
+    \item \textbf{Dependencias de Software:} Bibliotecas, frameworks y APIs.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Métodos de Evaluación de Compatibilidad}
+\begin{block}{Pruebas de Plataforma Cruzada}
+Ejecución del software en diferentes sistemas operativos y entornos para verificar el comportamiento consistente.
+\end{block}
+\begin{block}{Automatización de Pruebas}
+Uso de herramientas como Selenium, Appium y otros para automatizar las pruebas en diversas plataformas.
+\end{block}
+\begin{block}{Pruebas de Regresión}
+Asegurarse de que las nuevas versiones del software no introduzcan problemas de compatibilidad.
+\end{block}
+\begin{block}{Pruebas de Interoperabilidad}
+Verificar que el software interactúa correctamente con otros sistemas y aplicaciones.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Proceso de Evaluación de Compatibilidad}
+\begin{enumerate}
+    \item \textbf{Identificación de Plataformas:} Determinar las plataformas objetivo para la evaluación.
+    \item \textbf{Configuración de Entornos de Prueba:} Preparar los entornos de prueba necesarios para cada plataforma.
+    \item \textbf{Ejecución de Pruebas:} Realizar pruebas específicas para cada plataforma.
+    \item \textbf{Análisis de Resultados:} Evaluar los resultados y detectar problemas específicos de cada plataforma.
+    \item \textbf{Corrección de Problemas:} Resolver problemas de compatibilidad y repetir pruebas si es necesario.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplo Práctico}
+Evaluación de la compatibilidad de una aplicación web.
+\begin{block}{Pasos a Seguir}
+    \begin{enumerate}
+        \item \textbf{Identificar Navegadores:} Chrome, Firefox, Safari, Edge.
+        \item \textbf{Configurar Entornos:} Preparar máquinas virtuales con diferentes sistemas operativos y navegadores.
+        \item \textbf{Automatizar Pruebas:} Usar Selenium para automatizar pruebas de interfaz de usuario en diferentes navegadores.
+        \item \textbf{Ejecución y Análisis:} Ejecutar pruebas y analizar resultados para detectar inconsistencias.
+        \item \textbf{Corrección y Retest:} Corregir problemas encontrados y repetir pruebas.
+    \end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplo de Caso de Prueba}
+\begin{block}{Funcionalidad: Inicio de Sesión en la Aplicación Web}
+\begin{itemize}
+    \item \textbf{Precondiciones:} La aplicación debe estar desplegada en un servidor accesible.
+    \item \textbf{Acciones:} El usuario abre la aplicación en diferentes navegadores y realiza el inicio de sesión.
+    \item \textbf{Resultados Esperados:} El usuario debe poder iniciar sesión exitosamente en todos los navegadores sin errores de visualización o funcionalidad.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Evaluación}
+\begin{itemize}
+    \item \textbf{Compatibilidad de Navegadores:} La aplicación funcionó correctamente en Chrome y Firefox, pero presentó problemas en Safari.
+    \item \textbf{Compatibilidad de SO:} La aplicación se comportó de manera consistente en Windows y macOS, pero hubo problemas menores en algunas distribuciones de Linux.
+    \item \textbf{Interoperabilidad:} Se identificaron y corrigieron problemas de interoperabilidad con ciertas API externas.
+    \item \textbf{Regresión:} Se realizaron pruebas de regresión para asegurar que las correcciones no introdujeran nuevos problemas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusiones}
+La evaluación de compatibilidad en diversas plataformas es fundamental para asegurar que el software funcione correctamente en todos los entornos previstos. Un proceso de evaluación bien estructurado puede identificar y resolver problemas de compatibilidad de manera eficiente.
+\end{frame}
+
+\begin{frame}
+\frametitle{Bibliografía}
+\begin{thebibliography}{9}
+    \bibitem{ref1} Sommerville, I. (2011). \textit{Ingeniería de Software}. Pearson Educación.
+    \bibitem{ref2} Pressman, R. S. (2014). \textit{Ingeniería de Software: Un Enfoque Práctico}. McGraw-Hill.
+    \bibitem{ref3} Myers, G. J., Sandler, C., \& Badgett, T. (2011). \textit{The Art of Software Testing}. John Wiley \& Sons.
+    \bibitem{ref4} IEEE Standard for Software and System Test Documentation (IEEE Std 829-2008).
+    \bibitem{ref5} Graham, D., Veenendaal, E., Evans, I., \& Black, R. (2007). \textit{Foundations of Software Testing: ISTQB Certification}. Cengage Learning.
+\end{thebibliography}
+\end{frame}
+
+\end{document}

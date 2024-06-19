@@ -1,0 +1,86 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\title{Evaluación del Software Usando Métricas de Halstead}
+\author{Phocco Soncco Yeni Rosmirian}
+\date{Junio 2024}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Introducción}
+\begin{itemize}
+    \item Métricas de Halstead introducidas por Maurice Halstead en 1977.
+    \item Utilizadas para medir la complejidad de un programa de software.
+    \item Componentes básicos:
+    \begin{itemize}
+        \item $n_1$: Número de operadores únicos.
+        \item $n_2$: Número de operandos únicos.
+        \item $N_1$: Número total de operadores.
+        \item $N_2$: Número total de operandos.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\linewidth]{654.png}
+    \caption{Una imagen de ejemplo.}
+    \label{fig:ejemplo}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Componentes Básicos}
+\begin{itemize}
+    \item $n_1 = 10$ (int, if, <=, return, else, *, (, ), std::cout, <<)
+    \item $n_2 = 10$ (factorial, n, 1, num, 5, std::endl, std::cout, factorial, n, 0)
+    \item $N_1 = 16$ (int, if, <=, return, return, *, (, ), (, ), <<, <<, <<, <<, return, ;)
+    \item $N_2 = 15$ (factorial, n, 1, n, 1, factorial, n, 1, num, 5, std::endl, factorial, num, std::endl)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Métricas Derivadas}
+\begin{itemize}
+    \item \textbf{Longitud del Programa ($N$)}: $N = N_1 + N_2 = 16 + 15 = 31$
+    \item \textbf{Vocabulario del Programa ($n$)}: $n = n_1 + n_2 = 10 + 10 = 20$
+    \item \textbf{Volumen ($V$)}: $V = N \log_2 n = 31 \log_2 20 \approx 134.57$
+    \item \textbf{Dificultad ($D$)}: $D = \frac{n_1}{2} \times \frac{N_2}{n_2} = \frac{10}{2} \times \frac{15}{10} = 7.5$
+    \item \textbf{Esfuerzo ($E$)}: $E = D \times V = 7.5 \times 134.57 \approx 1009.28$
+    \item \textbf{Tiempo de Implementación ($T$)}: $T = \frac{E}{18} = \frac{1009.28}{18} \approx 56.07$ segundos
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusión}
+\begin{itemize}
+    \item Las métricas de Halstead proporcionan una herramienta poderosa para evaluar la complejidad del software.
+    \item Análisis detallado de operadores y operandos.
+    \item Visión cuantitativa de la mantenibilidad y comprensibilidad del código.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografía}
+\begin{thebibliography}{9}
+\bibitem{halstead1977}
+  Maurice H. Halstead,
+  \textit{Elements of Software Science},
+  Elsevier, 1977.
+
+\bibitem{schach}
+  Stephen R. Schach,
+  \textit{Object-Oriented and Classical Software Engineering},
+  McGraw-Hill, 2007.
+\bibitem{Espinosa1997}
+  Espinosa de los Monteros Anzaldúa,
+  \textit{Métricas de Halstead aplicadas a lenguajes de programación orientados a objetos},
+  1977.
+\end{thebibliography}
+\end{frame}
+
+\end{document}
